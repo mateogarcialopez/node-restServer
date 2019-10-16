@@ -8,11 +8,11 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended:true})); // son moddlewares y siempre se ejecuta cuando pasa el flujo
 app.use(bodyParser.json());
 
-app.get('/', (req, res)=>{
+app.get('/usuario', (req, res)=>{
     res.json('get');
 });
 
-app.post('/', (req, res)=>{
+app.post('/usuario', (req, res)=>{
     
     let body = req.body;
 
@@ -43,7 +43,7 @@ app.put('/usuario/:id', (req, res)=>{
     });
 });
 
-app.delete('/', (req, res)=>{
+app.delete('/usuario', (req, res)=>{
     res.json('delete');
 });
 
